@@ -6,9 +6,11 @@ RUN apt-get update
 
 RUN apt-get install -y npm nodejs
 
-MKDIR /app
+RUN mkdir /app
 
 COPY . /app
+
+WORKDIR /app
 
 CMD npm start
 
